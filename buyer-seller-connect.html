@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Buyer-Seller Connect - Agro Connect</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .section-buttons {
+      text-align: center;
+      margin: 2rem 0;
+    }
+    .section-buttons button {
+      margin: 0.5rem;
+      padding: 0.75rem 1.5rem;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 0.5rem;
+      cursor: pointer;
+    }
+    .card-grid {
+  display: none;
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 1.5rem;
+  padding: 2rem;
+  }
+
+    .card-grid.active {
+      display: grid;
+    }
+    .product-card {
+      background-color: #fff;
+      padding: 1rem;
+      border-radius: 0.75rem;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+    .product-card img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 0.5rem;
+    }
+    .product-card h4 {
+      margin: 0.5rem 0;
+    }
+    .product-card a {
+      display: inline-block;
+      margin-top: 0.5rem;
+      color: #2e7d32;
+      text-decoration: none;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="monitoring.html">Smart Crop Monitoring</a></li>
+      <li><a href="irrigation.html">Automated Irrigation</a></li>
+      <li><a href="insights.html">Market Insights</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+  </nav>
+
+  <main class="content">
+    <h1>Buyer-Seller Connect</h1>
+    <p style="text-align: center; max-width: 700px; margin: auto;">Explore verified sellers and connect directly for seeds, fruits, and vegetables. Click a category to view available products.</p>
+
+    <div class="section-buttons">
+      <button onclick="showSection('seeds')">Seeds</button>
+      <button onclick="showSection('fruits')">Fruits</button>
+      <button onclick="showSection('vegetables')">Vegetables</button>
+    </div>
+
+    <!-- Seeds Section -->
+    <div id="seeds" class="card-grid">
+        <div class="product-card">
+          <img src="seeds/tomato.jpg" alt="Tomato Seeds">
+          <h3>Tomato Seeds</h3>
+          <p>Price: ₹50/packet</p>
+          <a href="https://wa.me/919876543210" target="_blank" class="whatsapp-btn">Chat Seller</a>
+        </div>
+        <div class="product-card">
+          <img src="seeds/brinjal.jpg" alt="Brinjal Seeds">
+          <h3>Brinjal Seeds</h3>
+          <p>Price: ₹40/packet</p>
+          <a href="https://wa.me/919812345678" target="_blank" class="whatsapp-btn">Chat Seller</a>
+        </div>
+        <div class="product-card">
+          <img src="seeds/marigold.jpg" alt="Marigold Seeds">
+          <h3>Marigold Flower Seeds</h3>
+          <p>Price: ₹30/packet</p>
+          <a href="https://wa.me/919823456789" target="_blank" class="whatsapp-btn">Chat Seller</a>
+        </div>
+        <div class="product-card">
+          <img src="seeds/rose.jpeg" alt="Rose Seeds">
+          <h3>Rose Seeds</h3>
+          <p>Price: ₹45/packet</p>
+          <a href="https://wa.me/919867543210" target="_blank" class="whatsapp-btn">Chat Seller</a>
+        </div>
+        <div class="product-card">
+          <img src="seeds/cucumber.jpeg" alt="Cucumber Seeds">
+          <h3>Cucumber Seeds</h3>
+          <p>Price: ₹35/packet</p>
+          <a href="https://wa.me/919834567890" target="_blank" class="whatsapp-btn">Chat Seller</a>
+        </div>
+        <div class="product-card">
+          <img src="seeds/watermelon.jpeg" alt="Watermelon Seeds">
+          <h3>Watermelon Seeds</h3>
+          <p>Price: ₹60/packet</p>
+          <a href="https://wa.me/919845678901" target="_blank" class="whatsapp-btn">Chat Seller</a>
+        </div>
+        <div class="product-card">
+          <img src="seeds/carrot.jpeg" alt="Carrot Seeds">
+          <h3>Carrot Seeds</h3>
+          <p>Price: ₹38/packet</p>
+          <a href="https://wa.me/919876123456" target="_blank" class="whatsapp-btn">Chat Seller</a>
+        </div>
+        <div class="product-card">
+          <img src="seeds/chili.jpg" alt="Chili Seeds">
+          <h3>Chili Seeds</h3>
+          <p>Price: ₹40/packet</p>
+          <a href="https://wa.me/919834125678" target="_blank" class="whatsapp-btn">Chat Seller</a>
+        </div>
+        <div class="product-card">
+          <img src="seeds/onion.png" alt="Onion Seeds">
+          <h3>Onion Seeds</h3>
+          <p>Price: ₹50/packet</p>
+          <a href="https://wa.me/919847561234" target="_blank" class="whatsapp-btn">Chat Seller</a>
+        </div>
+        <div class="product-card">
+          <img src="seeds/lotus.avif" alt="Lotus Seeds">
+          <h3>Lotus Flower Seeds</h3>
+          <p>Price: ₹70/packet</p>
+          <a href="https://wa.me/919856789432" target="_blank" class="whatsapp-btn">Chat Seller</a>
+        </div>
+        <div class="product-card">
+          <img src="seeds/peach.webp" alt="Peach Seeds">
+          <h3>Peach Fruit Seeds</h3>
+          <p>Price: ₹55/packet</p>
+          <a href="https://wa.me/919812343456" target="_blank" class="whatsapp-btn">Chat Seller</a>
+        </div>
+        <div class="product-card">
+          <img src="seeds/strawberry.jpeg" alt="Strawberry Seeds">
+          <h3>Strawberry Seeds</h3>
+          <p>Price: ₹60/packet</p>
+          <a href="https://wa.me/919899876543" target="_blank" class="whatsapp-btn">Chat Seller</a>
+        </div>
+        <div class="product-card">
+          <img src="seeds/cauliflower.jpeg" alt="Cauliflower Seeds">
+          <h3>Cauliflower Seeds</h3>
+          <p>Price: ₹45/packet</p>
+          <a href="https://wa.me/919834523456" target="_blank" class="whatsapp-btn">Chat Seller</a>
+        </div>
+        <div class="product-card">
+          <img src="seeds/coriander.jpeg" alt="Coriander Seeds">
+          <h3>Coriander Seeds</h3>
+          <p>Price: ₹28/packet</p>
+          <a href="https://wa.me/919897543210" target="_blank" class="whatsapp-btn">Chat Seller</a>
+        </div>
+        <div class="product-card">
+          <img src="seeds/basil.jpeg" alt="Basil Seeds">
+          <h3>Basil Seeds</h3>
+          <p>Price: ₹32/packet</p>
+          <a href="https://wa.me/919843216789" target="_blank" class="whatsapp-btn">Chat Seller</a>
+        </div>
+      </div>
+      
+      <!-- 13 more cards here... -->
+    </div>
+
+    <!-- Fruits Section -->
+    
+<div id="fruits" class="card-grid">
+    <div class="product-card">
+      <img src="images/fruits/mango.jpeg" alt="Mango">
+      <h4>Mango (Alphonso)</h4>
+      <p>Price: ₹80/kg</p>
+      <a href="https://wa.me/919811111111" target="_blank">Chat Seller</a>
+    </div>
+    <div class="product-card">
+      <img src="images/fruits/apple.jpeg" alt="Apple">
+      <h4>Apple (Kinnaur)</h4>
+      <p>Price: ₹120/kg</p>
+      <a href="https://wa.me/919822222222" target="_blank">Chat Seller</a>
+    </div>
+    <div class="product-card">
+      <img src="images/fruits/banana.jpeg" alt="Banana">
+      <h4>Banana (Cavendish)</h4>
+      <p>Price: ₹40/dozen</p>
+      <a href="https://wa.me/919833333333" target="_blank">Chat Seller</a>
+    </div>
+    <div class="product-card">
+      <img src="images/fruits/orange.jpeg" alt="Orange">
+      <h4>Orange (Nagpur)</h4>
+      <p>Price: ₹70/kg</p>
+      <a href="https://wa.me/919844444444" target="_blank">Chat Seller</a>
+    </div>
+    <div class="product-card">
+      <img src="images/fruits/pomegranate.jpeg" alt="Pomegranate">
+      <h4>Pomegranate</h4>
+      <p>Price: ₹90/kg</p>
+      <a href="https://wa.me/919855555555" target="_blank">Chat Seller</a>
+    </div>
+    <div class="product-card">
+      <img src="images/fruits/guava.jpeg" alt="Guava">
+      <h4>Guava</h4>
+      <p>Price: ₹45/kg</p>
+      <a href="https://wa.me/919866666666" target="_blank">Chat Seller</a>
+    </div>
+    <div class="product-card">
+      <img src="images/fruits/pineapple.jpeg" alt="Pineapple">
+      <h4>Pineapple</h4>
+      <p>Price: ₹60/piece</p>
+      <a href="https://wa.me/919877777777" target="_blank">Chat Seller</a>
+    </div>
+    <div class="product-card">
+      <img src="images/fruits/watermelon.jpeg" alt="Watermelon">
+      <h4>Watermelon</h4>
+      <p>Price: ₹20/kg</p>
+      <a href="https://wa.me/919888888888" target="_blank">Chat Seller</a>
+    </div>
+    <div class="product-card">
+      <img src="images/fruits/kiwi.jpeg" alt="Kiwi">
+      <h4>Kiwi</h4>
+      <p>Price: ₹30/piece</p>
+      <a href="https://wa.me/919899999999" target="_blank">Chat Seller</a>
+    </div>
+    <div class="product-card">
+      <img src="images/fruits/papaya.jpeg" alt="Papaya">
+      <h4>Papaya</h4>
+      <p>Price: ₹25/kg</p>
+      <a href="https://wa.me/919811122233" target="_blank">Chat Seller</a>
+    </div>
+    <div class="product-card">
+      <img src="images/fruits/strawberry.jpeg" alt="Strawberry">
+      <h4>Strawberry</h4>
+      <p>Price: ₹150/box</p>
+      <a href="https://wa.me/919812345678" target="_blank">Chat Seller</a>
+    </div>
+    <div class="product-card">
+      <img src="images/fruits/pear.jpeg" alt="Pear">
+      <h4>Pear</h4>
+      <p>Price: ₹65/kg</p>
+      <a href="https://wa.me/919823456789" target="_blank">Chat Seller</a>
+    </div>
+    <div class="product-card">
+      <img src="images/fruits/cherry.jpg" alt="Cherry">
+      <h4>Cherry</h4>
+      <p>Price: ₹200/box</p>
+      <a href="https://wa.me/919834567890" target="_blank">Chat Seller</a>
+    </div>
+    <div class="product-card">
+      <img src="images/fruits/blueberry.jpeg" alt="Blueberry">
+      <h4>Blueberry</h4>
+      <p>Price: ₹250/box</p>
+      <a href="https://wa.me/919845678901" target="_blank">Chat Seller</a>
+    </div>
+    <div class="product-card">
+      <img src="images/fruits/grapes.jpeg" alt="Grapes">
+      <h4>Grapes (Green)</h4>
+      <p>Price: ₹60/kg</p>
+      <a href="https://wa.me/919856789012" target="_blank">Chat Seller</a>
+    </div>
+  </div>
+  
+    <!-- Vegetables Section -->
+<div id="vegetables" class="card-grid">
+    <div class="product-card">
+      <img src="images/vegetables/tomato.jpeg" alt="Tomato">
+      <h4>Tomato</h4>
+      <p>Price: ₹20/kg</p>
+      <a href="https://wa.me/919811111111" target="_blank">Chat Seller</a>
+    </div>
+    <div class="product-card">
+      <img src="images/vegetables/onion.jpeg" alt="Onion">
+      <h4>Onion</h4>
+      <p>Price: ₹25/kg</p>
+      <a href="https://wa.me/919822222222" target="_blank">Chat Seller</a>
+    </div>
+    <div class="product-card">
+      <img src="images/vegetables/potato.jpeg" alt="Potato">
+      <h4>Potato</h4>
+      <p>Price: ₹18/kg</p>
+      <a href="https://wa.me/919833333333" target="_blank">Chat Seller</a>
+    </div>
+    <div class="product-card">
+      <img src="images/vegetables/brinjal.jpeg" alt="Brinjal">
+      <h4>Brinjal</h4>
+      <p>Price: ₹30/kg</p>
+      <a href="https://wa.me/919844444444" target="_blank">Chat Seller</a>
+    </div>
+    <div class="product-card">
+      <img src="images/vegetables/cabbage.jpeg" alt="Cabbage">
+      <h4>Cabbage</h4>
+      <p>Price: ₹20/kg</p>
+      <a href="https://wa.me/919855555555" target="_blank">Chat Seller</a>
+    </div>
+    <div class="product-card">
+      <img src="images/vegetables/cauliflower.jpeg" alt="Cauliflower">
+      <h4>Cauliflower</h4>
+      <p>Price: ₹25/kg</p>
+      <a href="https://wa.me/919866666666" target="_blank">Chat Seller</a>
+    </div>
+    <div class="product-card">
+      <img src="images/vegetables/carrot.jpg" alt="Carrot">
+      <h4>Carrot</h4>
+      <p>Price: ₹28/kg</p>
+      <a href="https://wa.me/919877777777" target="_blank">Chat Seller</a>
+    </div>
+    <div class="product-card">
+      <img src="images/vegetables/spinach.webp" alt="Spinach">
+      <h4>Spinach</h4>
+      <p>Price: ₹15/bundle</p>
+      <a href="https://wa.me/919888888888" target="_blank">Chat Seller</a>
+    </div>
+    <div class="product-card">
+      <img src="images/vegetables/bottle-gourd.webp" alt="Bottle Gourd">
+      <h4>Bottle Gourd</h4>
+      <p>Price: ₹20/kg</p>
+      <a href="https://wa.me/919899999999" target="_blank">Chat Seller</a>
+    </div>
+    <div class="product-card">
+      <img src="images/vegetables/ladyfinger.jpeg" alt="Lady Finger">
+      <h4>Lady Finger</h4>
+      <p>Price: ₹30/kg</p>
+      <a href="https://wa.me/919811122233" target="_blank">Chat Seller</a>
+    </div>
+    <div class="product-card">
+      <img src="images/vegetables/broccoli.jpeg" alt="Broccoli">
+      <h4>Broccoli</h4>
+      <p>Price: ₹70/kg</p>
+      <a href="https://wa.me/919812345678" target="_blank">Chat Seller</a>
+    </div>
+    <div class="product-card">
+      <img src="images/vegetables/capsicum.jpeg" alt="Capsicum">
+      <h4>Capsicum</h4>
+      <p>Price: ₹50/kg</p>
+      <a href="https://wa.me/919823456789" target="_blank">Chat Seller</a>
+    </div>
+    <div class="product-card">
+      <img src="images/vegetables/greenpeas.jpeg" alt="Green Peas">
+      <h4>Green Peas</h4>
+      <p>Price: ₹60/kg</p>
+      <a href="https://wa.me/919834567890" target="_blank">Chat Seller</a>
+    </div>
+    <div class="product-card">
+      <img src="images/vegetables/garlic.jpeg" alt="Garlic">
+      <h4>Garlic</h4>
+      <p>Price: ₹80/kg</p>
+      <a href="https://wa.me/919845678901" target="_blank">Chat Seller</a>
+    </div>
+    <div class="product-card">
+      <img src="images/vegetables/ginger.jpeg" alt="Ginger">
+      <h4>Ginger</h4>
+      <p>Price: ₹90/kg</p>
+      <a href="https://wa.me/919856789012" target="_blank">Chat Seller</a>
+    </div>
+  </div>
+  
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Agro Connect - Smart E-Farming</p>
+  </footer>
+
+  <script>
+    function showSection(sectionId) {
+  const sections = document.querySelectorAll('.card-grid');
+  sections.forEach(sec => sec.classList.remove('active'));
+  document.getElementById(sectionId).classList.add('active');
+}
+
+    
+  </script>
+</body>
+</html>

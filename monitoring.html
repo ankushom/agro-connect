@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Smart Crop Monitoring</title>
+  <style>
+    .app-container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      font-family: Arial, sans-serif;
+      color: #333;
+    }
+
+    h1 {
+      text-align: center;
+      color: #2c3e50;
+    }
+
+    section {
+      margin-bottom: 20px;
+      background-color: #f9f9f9;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      color: #27ae60;
+      border-bottom: 2px solid #27ae60;
+      padding-bottom: 5px;
+      margin-bottom: 10px;
+    }
+
+    ul {
+      list-style-type: disc;
+      padding-left: 20px;
+    }
+
+    .loading, .error {
+      text-align: center;
+      font-size: 1.2em;
+      margin-top: 50px;
+      color: #e74c3c;
+    }
+
+    .weather-link {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    input[type="text"] {
+      padding: 8px;
+      margin-top: 10px;
+      width: 100%;
+      max-width: 250px;
+    }
+
+    button {
+      padding: 10px;
+      background-color: #27ae60;
+      color: white;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+      max-width: 250px;
+      margin-top: 10px;
+    }
+
+    button:hover {
+      background-color: #2ecc71;
+    }
+  </style>
+</head>
+<body>
+  <div class="app-container">
+    <h1>Smart Crop Monitoring</h1>
+
+    <section id="weather">
+      <h2>Weather Forecast</h2>
+      
+      <!-- User Input to Add Location -->
+      <label for="locationInput">Enter a location:</label>
+      <input type="text" id="locationInput" placeholder="Enter city name or ZIP code">
+      <button onclick="checkWeather()">Check Weather</button>
+    </section>
+
+    <section id="notifications">
+      <h2>Notifications</h2>
+      <ul id="notifications-list">
+        <li>Irrigation needed for corn field.</li>
+        <li>Pest control alert in Zone B.</li>
+      </ul>
+    </section>
+
+    <section id="reminders">
+      <h2>Farming Reminders</h2>
+      <ul id="reminders-list">
+        <li><strong>7:00 AM</strong> - Water tomato plants.</li>
+        <li><strong>6:00 PM</strong> - Check soil moisture in rice field.</li>
+      </ul>
+    </section>
+  </div>
+
+  <script>
+    // Function to check weather and send notifications
+    function checkWeather() {
+      const location = document.getElementById('locationInput').value;
+      if (location) {
+        const weatherUrl = `https://www.google.com/search?q=weather+${encodeURIComponent(location)}`;
+        window.open(weatherUrl, '_blank');
+
+        // Example: If the weather condition is 'Rain', notify the user
+        if ('Notification' in window && Notification.permission === 'granted') {
+          new Notification('Weather Alert', {
+            body: `Heavy rain expected in ${location}. Irrigation may be needed!`,
+            icon: 'https://example.com/weather-icon.png' // Replace with your own icon
+          });
+        } else if ('Notification' in window && Notification.permission !== 'denied') {
+          Notification.requestPermission().then(permission => {
+            if (permission === 'granted') {
+              new Notification('Weather Alert', {
+                body: `Heavy rain expected in ${location}. Irrigation may be needed!`,
+                icon: 'https://example.com/weather-icon.png' // Replace with your own icon
+              });
+            }
+          });
+        }
+      } else {
+        alert('Please enter a location!');
+      }
+    }
+
+    // Function to send reminder notifications
+    function sendReminderNotifications() {
+      const currentTime = new Date();
+      const reminders = [
+        { time: '07:00 AM', message: 'Water tomato plants.' },
+        { time: '06:00 PM', message: 'Check soil moisture in rice field.' }
+      ];
+
+      reminders.forEach(reminder => {
+        const reminderTime = new Date(currentTime);
+        const [hours, minutes] = reminder.time.split(':');
+        reminderTime.setHours(parseInt(hours), parseInt(minutes), 0);
+
+        if (currentTime.getHours() === reminderTime.getHours() && currentTime.getMinutes() === reminderTime.getMinutes()) {
+          if ('Notification' in window && Notification.permission === 'granted') {
+            new Notification('Farming Reminder', {
+              body: reminder.message,
+              icon: 'https://example.com/reminder-icon.png' // Replace with your own icon
+            });
+          }
+        }
+      });
+    }
+
+    // Check for notifications every minute
+    setInterval(sendReminderNotifications, 60000); // 60,000 ms = 1 minute
+
+    // Smooth scroll (script2.js)
+    document.addEventListener('DOMContentLoaded', function () {
+      const navLinks = document.querySelectorAll('.nav-links a');
+      navLinks.forEach(link => {
+        link.addEventListener('click', function (e) {
+          e.preventDefault();
+          const targetId = this.getAttribute('href').substring(1);
+          const targetSection = document.getElementById(targetId);
+          if (targetSection) {
+            window.scrollTo({
+              top: targetSection.offsetTop - 60,
+              behavior: 'smooth'
+            });
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>

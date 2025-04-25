@@ -1,0 +1,444 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f4f9f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Navbar Styling */
+.navbar {
+    background-color: #4CAF50;
+    padding: 1rem;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: #e2ffe2;
+    text-decoration: underline;
+}
+
+/* Main Content Styling */
+main.content {
+    padding: 2rem;
+    max-width: 800px;
+    margin: auto;
+}
+
+h1 {
+    color: #2e7d32;
+    margin-bottom: 1rem;
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #e0f2f1;
+    width: 100%;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+}
+
+/* Hero Section Enhancements */
+.hero {
+    background-image: url('farming.png');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 6rem 2rem;
+    border-radius: 1rem;
+    margin: 2rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.hero h1 {
+    color: white;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto 1rem auto;
+}
+
+/* Button Styling */
+.btn {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.75rem 1.5rem;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 0.5rem;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #45a049;
+}
+
+/* Home Page Sections */
+.home-sections {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.home-sections section {
+    margin-bottom: 2.5rem;
+}
+
+/* Features Section */
+.feature-section {
+    padding: 2rem;
+    background-color: #ffffff;
+    border-top: 2px solid #e0f2f1;
+    border-bottom: 2px solid #e0f2f1;
+    text-align: center;
+}
+
+.feature-section h2 {
+    font-size: 2rem;
+    color: #2e7d32;
+    margin-bottom: 2rem;
+}
+
+.feature-cards {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    gap: 2rem;
+    overflow-x: auto;
+}
+
+.feature-card {
+    background: #f0fff0;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    width: calc(33.333% - 1.33rem);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+}
+
+.feature-card h3 {
+    color: #388e3c;
+    margin-bottom: 0.5rem;
+}
+
+.feature-card p {
+    color: #555;
+    font-size: 0.95rem;
+}
+
+.small-btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.85rem;
+    margin-top: 1rem;
+}
+
+/* Why Choose Section */
+.why-choose-section {
+    padding: 2rem;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.why-choose-section h2 {
+    font-size: 2rem;
+    color: #2e7d32;
+    margin-bottom: 2rem;
+}
+
+.benefit-cards {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    gap: 2rem;
+    overflow-x: auto;
+}
+
+.benefit-card {
+    background-color: #f9fff9;
+    border: 1px solid #d9e9d9;
+    border-left: 5px solid #4CAF50;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    width: calc(33.333% - 1.33rem);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+    transition: transform 0.3s ease;
+}
+
+.benefit-card:hover {
+    transform: translateY(-5px);
+}
+
+.benefit-card h3 {
+    color: #388e3c;
+    margin-bottom: 0.5rem;
+}
+
+.benefit-card p {
+    font-size: 0.95rem;
+    color: #555;
+}
+
+/* Impact Section */
+.impact-section {
+    padding: 2rem;
+    background-color: #eaf5e9;
+    text-align: center;
+}
+
+.impact-section h2 {
+    font-size: 1.8rem;
+    color: #2e7d32;
+    margin-bottom: 1rem;
+}
+
+.impact-section ul {
+    list-style: none;
+    padding: 0;
+    font-size: 1rem;
+    color: #333;
+}
+
+.impact-section li {
+    margin-bottom: 0.5rem;
+}
+
+/* Market Insights Page Styles */
+.market-insights {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #eaf5e9;
+    border-radius: 1rem;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.05);
+}
+
+.market-insights h2 {
+    color: #2e7d32;
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+
+.market-insights .intro {
+    text-align: center;
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 2rem;
+}
+
+.insight-card {
+    background-color: #ffffff;
+    border-left: 5px solid #4CAF50;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.insight-card h3 {
+    margin-bottom: 0.5rem;
+    color: #388e3c;
+}
+
+.insight-card p {
+    color: #333;
+    line-height: 1.5;
+}
+
+.insight-card a {
+    color: #2e7d32;
+    text-decoration: underline;
+}
+
+.insight-card small {
+    display: block;
+    margin-top: 0.5rem;
+    color: #888;
+}
+/* Call to Action Section */
+.cta-section {
+    background-color: #dcedc8;
+    text-align: center;
+    padding: 3rem 1rem;
+    border-radius: 1rem;
+    margin: 3rem 2rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.cta-section h2 {
+    font-size: 2rem;
+    color: #2e7d32;
+    margin-bottom: 1rem;
+}
+
+.cta-section .btn {
+    font-size: 1.1rem;
+    padding: 0.8rem 2rem;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 0.5rem;
+}
+
+/* Responsive layout for smaller screens */
+@media (max-width: 900px) {
+    .feature-cards,
+    .benefit-cards {
+        flex-wrap: wrap;
+    }
+
+    .feature-card,
+    .benefit-card {
+        width: 100%;
+    }
+}
+/* Signup Page Styling */
+.signup-section {
+    max-width: 500px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #ffffff;
+    border-radius: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.signup-section h1 {
+    color: #2e7d32;
+    margin-bottom: 1.5rem;
+}
+
+.signup-section form {
+    display: flex;
+    flex-direction: column;
+}
+
+.signup-section label {
+    text-align: left;
+    margin-bottom: 0.5rem;
+}
+
+.signup-section input {
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+}
+
+.signup-section .btn {
+    padding: 1rem;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 1rem;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.signup-section .btn:hover {
+    background-color: #388e3c;
+}
+
+.signup-section p {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.signup-section a {
+    color: #4CAF50;
+    text-decoration: none;
+}
+/* Login Page Styling */
+.login-section {
+    max-width: 500px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #ffffff;
+    border-radius: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.login-section h1 {
+    color: #2e7d32;
+    margin-bottom: 1.5rem;
+}
+
+.login-section form {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-section label {
+    text-align: left;
+    margin-bottom: 0.5rem;
+}
+
+.login-section input {
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+}
+
+.login-section .btn {
+    padding: 1rem;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 1rem;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login-section .btn:hover {
+    background-color: #388e3c;
+}
+
+.login-section p {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.login-section a {
+    color: #4CAF50;
+    text-decoration: none;
+}

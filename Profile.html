@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - Agro Connect</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="signup.html">Sign Up</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="profile.html" class="active">Profile</a></li>
+        </ul>
+    </nav>
+
+    <div class="profile-section">
+        <h1>Your Profile</h1>
+        <div id="profile-details">
+            <!-- User details will be shown here dynamically -->
+        </div>
+
+        <button class="btn" onclick="editProfile()">Edit Profile</button>
+        <button class="btn delete" onclick="deleteProfile()">Delete Profile</button>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Agro Connect. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Display user data from localStorage
+        const profileDetails = document.getElementById("profile-details");
+        const user = JSON.parse(localStorage.getItem("user"));
+
+        function loadProfile() {
+            if (user) {
+                profileDetails.innerHTML = `
+                    <p><strong>Name:</strong> ${user.name}</p>
+                    <p><strong>Email:</strong> ${user.email}</p>
+                    <p><strong>Phone:</strong> ${user.phone}</p>
+                    <p><strong>Address:</strong> ${user.address}</p>
+                    <p><strong>Joined On:</strong> ${user.joined || new Date().toLocaleDateString()}</p>
+                `;
+            } else {
+                profileDetails.innerHTML = "<p>No user information found. Please sign up.</p>";
+            }
+        }
+
+        function deleteProfile() {
+            if (confirm("Are you sure you want to delete your profile? This action cannot be undone.")) {
+                localStorage.removeItem("user");
+                alert("Profile deleted successfully.");
+                window.location.href = "signup.html";
+            }
+        }
+
+        function editProfile() {
+            window.location.href = "signup.html"; // Redirect to sign up to re-enter details
+        }
+
+        loadProfile();
+    </script>
+</body>
+
+</html>
